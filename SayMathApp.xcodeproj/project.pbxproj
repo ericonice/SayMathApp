@@ -15,6 +15,14 @@
 		07099F201F3ECA6F00D66796 /* SayMathAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07099F1F1F3ECA6F00D66796 /* SayMathAppTests.swift */; };
 		07099F2C1F3ECCDF00D66796 /* MathTestInitiatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07099F2B1F3ECCDF00D66796 /* MathTestInitiatorViewController.swift */; };
 		07C311E31F3FB8B70086A0A4 /* MathTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C311E21F3FB8B70086A0A4 /* MathTestViewController.swift */; };
+		07C311E61F3FC3020086A0A4 /* Equation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C311E51F3FC3020086A0A4 /* Equation.swift */; };
+		07C311E81F3FC3360086A0A4 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C311E71F3FC3360086A0A4 /* Operation.swift */; };
+		07C311EA1F3FC3700086A0A4 /* EquationGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C311E91F3FC3700086A0A4 /* EquationGenerator.swift */; };
+		07C311ED1F3FC61F0086A0A4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C311EC1F3FC61F0086A0A4 /* Utilities.swift */; };
+		07C311F11F3FC72A0086A0A4 /* EquationTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C311F01F3FC72A0086A0A4 /* EquationTester.swift */; };
+		07C311F31F3FC7720086A0A4 /* SayMathConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C311F21F3FC7720086A0A4 /* SayMathConstants.swift */; };
+		07C311F51F3FC7B30086A0A4 /* SayMathError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C311F41F3FC7B30086A0A4 /* SayMathError.swift */; };
+		07C311F81F3FC8170086A0A4 /* SpeechDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C311F71F3FC8170086A0A4 /* SpeechDetector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +48,14 @@
 		07099F211F3ECA6F00D66796 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07099F2B1F3ECCDF00D66796 /* MathTestInitiatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathTestInitiatorViewController.swift; sourceTree = "<group>"; };
 		07C311E21F3FB8B70086A0A4 /* MathTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathTestViewController.swift; sourceTree = "<group>"; };
+		07C311E51F3FC3020086A0A4 /* Equation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equation.swift; sourceTree = "<group>"; };
+		07C311E71F3FC3360086A0A4 /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		07C311E91F3FC3700086A0A4 /* EquationGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationGenerator.swift; sourceTree = "<group>"; };
+		07C311EC1F3FC61F0086A0A4 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		07C311F01F3FC72A0086A0A4 /* EquationTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationTester.swift; sourceTree = "<group>"; };
+		07C311F21F3FC7720086A0A4 /* SayMathConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SayMathConstants.swift; sourceTree = "<group>"; };
+		07C311F41F3FC7B30086A0A4 /* SayMathError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SayMathError.swift; sourceTree = "<group>"; };
+		07C311F71F3FC8170086A0A4 /* SpeechDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechDetector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +100,13 @@
 				07099F0B1F3ECA6F00D66796 /* Main.storyboard */,
 				07099F2B1F3ECCDF00D66796 /* MathTestInitiatorViewController.swift */,
 				07C311E21F3FB8B70086A0A4 /* MathTestViewController.swift */,
+				07C311F21F3FC7720086A0A4 /* SayMathConstants.swift */,
+				07C311F41F3FC7B30086A0A4 /* SayMathError.swift */,
 				07099F071F3ECA6F00D66796 /* AppDelegate.swift */,
 				07099F161F3ECA6F00D66796 /* Info.plist */,
+				07C311F61F3FC7DE0086A0A4 /* Speech */,
+				07C311E41F3FC2E20086A0A4 /* Equations */,
+				07C311EB1F3FC6050086A0A4 /* Utilities */,
 				07099F2A1F3ECA8900D66796 /* Supporting Files */,
 			);
 			path = SayMathApp;
@@ -108,6 +129,33 @@
 				07099F0E1F3ECA6F00D66796 /* SayMathApp.xcdatamodeld */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07C311E41F3FC2E20086A0A4 /* Equations */ = {
+			isa = PBXGroup;
+			children = (
+				07C311E51F3FC3020086A0A4 /* Equation.swift */,
+				07C311E71F3FC3360086A0A4 /* Operation.swift */,
+				07C311E91F3FC3700086A0A4 /* EquationGenerator.swift */,
+				07C311F01F3FC72A0086A0A4 /* EquationTester.swift */,
+			);
+			path = Equations;
+			sourceTree = "<group>";
+		};
+		07C311EB1F3FC6050086A0A4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				07C311EC1F3FC61F0086A0A4 /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		07C311F61F3FC7DE0086A0A4 /* Speech */ = {
+			isa = PBXGroup;
+			children = (
+				07C311F71F3FC8170086A0A4 /* SpeechDetector.swift */,
+			);
+			path = Speech;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,9 +260,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				07C311E31F3FB8B70086A0A4 /* MathTestViewController.swift in Sources */,
+				07C311F81F3FC8170086A0A4 /* SpeechDetector.swift in Sources */,
+				07C311EA1F3FC3700086A0A4 /* EquationGenerator.swift in Sources */,
+				07C311E81F3FC3360086A0A4 /* Operation.swift in Sources */,
 				07099F081F3ECA6F00D66796 /* AppDelegate.swift in Sources */,
+				07C311E61F3FC3020086A0A4 /* Equation.swift in Sources */,
+				07C311F51F3FC7B30086A0A4 /* SayMathError.swift in Sources */,
 				07099F101F3ECA6F00D66796 /* SayMathApp.xcdatamodeld in Sources */,
+				07C311ED1F3FC61F0086A0A4 /* Utilities.swift in Sources */,
+				07C311F11F3FC72A0086A0A4 /* EquationTester.swift in Sources */,
 				07099F2C1F3ECCDF00D66796 /* MathTestInitiatorViewController.swift in Sources */,
+				07C311F31F3FC7720086A0A4 /* SayMathConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
