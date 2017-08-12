@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		07099F081F3ECA6F00D66796 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07099F071F3ECA6F00D66796 /* AppDelegate.swift */; };
-		07099F0A1F3ECA6F00D66796 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07099F091F3ECA6F00D66796 /* ViewController.swift */; };
 		07099F0D1F3ECA6F00D66796 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07099F0B1F3ECA6F00D66796 /* Main.storyboard */; };
 		07099F101F3ECA6F00D66796 /* SayMathApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 07099F0E1F3ECA6F00D66796 /* SayMathApp.xcdatamodeld */; };
 		07099F121F3ECA6F00D66796 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07099F111F3ECA6F00D66796 /* Assets.xcassets */; };
 		07099F151F3ECA6F00D66796 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07099F131F3ECA6F00D66796 /* LaunchScreen.storyboard */; };
 		07099F201F3ECA6F00D66796 /* SayMathAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07099F1F1F3ECA6F00D66796 /* SayMathAppTests.swift */; };
+		07099F2C1F3ECCDF00D66796 /* MathTestInitiatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07099F2B1F3ECCDF00D66796 /* MathTestInitiatorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +29,6 @@
 /* Begin PBXFileReference section */
 		07099F041F3ECA6F00D66796 /* SayMathApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SayMathApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07099F071F3ECA6F00D66796 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		07099F091F3ECA6F00D66796 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		07099F0C1F3ECA6F00D66796 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07099F0F1F3ECA6F00D66796 /* SayMathApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SayMathApp.xcdatamodel; sourceTree = "<group>"; };
 		07099F111F3ECA6F00D66796 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		07099F1B1F3ECA6F00D66796 /* SayMathAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SayMathAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07099F1F1F3ECA6F00D66796 /* SayMathAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SayMathAppTests.swift; sourceTree = "<group>"; };
 		07099F211F3ECA6F00D66796 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07099F2B1F3ECCDF00D66796 /* MathTestInitiatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathTestInitiatorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +79,10 @@
 		07099F061F3ECA6F00D66796 /* SayMathApp */ = {
 			isa = PBXGroup;
 			children = (
-				07099F071F3ECA6F00D66796 /* AppDelegate.swift */,
-				07099F091F3ECA6F00D66796 /* ViewController.swift */,
 				07099F0B1F3ECA6F00D66796 /* Main.storyboard */,
+				07099F2B1F3ECCDF00D66796 /* MathTestInitiatorViewController.swift */,
+				07099F071F3ECA6F00D66796 /* AppDelegate.swift */,
+				07099F161F3ECA6F00D66796 /* Info.plist */,
 				07099F2A1F3ECA8900D66796 /* Supporting Files */,
 			);
 			path = SayMathApp;
@@ -101,7 +102,6 @@
 			children = (
 				07099F111F3ECA6F00D66796 /* Assets.xcassets */,
 				07099F131F3ECA6F00D66796 /* LaunchScreen.storyboard */,
-				07099F161F3ECA6F00D66796 /* Info.plist */,
 				07099F0E1F3ECA6F00D66796 /* SayMathApp.xcdatamodeld */,
 			);
 			path = "Supporting Files";
@@ -208,9 +208,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07099F0A1F3ECA6F00D66796 /* ViewController.swift in Sources */,
 				07099F081F3ECA6F00D66796 /* AppDelegate.swift in Sources */,
 				07099F101F3ECA6F00D66796 /* SayMathApp.xcdatamodeld in Sources */,
+				07099F2C1F3ECCDF00D66796 /* MathTestInitiatorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
