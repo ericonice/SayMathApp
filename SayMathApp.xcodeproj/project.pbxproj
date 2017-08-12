@@ -1,0 +1,460 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07099F081F3ECA6F00D66796 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07099F071F3ECA6F00D66796 /* AppDelegate.swift */; };
+		07099F0A1F3ECA6F00D66796 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07099F091F3ECA6F00D66796 /* ViewController.swift */; };
+		07099F0D1F3ECA6F00D66796 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07099F0B1F3ECA6F00D66796 /* Main.storyboard */; };
+		07099F101F3ECA6F00D66796 /* SayMathApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 07099F0E1F3ECA6F00D66796 /* SayMathApp.xcdatamodeld */; };
+		07099F121F3ECA6F00D66796 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07099F111F3ECA6F00D66796 /* Assets.xcassets */; };
+		07099F151F3ECA6F00D66796 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07099F131F3ECA6F00D66796 /* LaunchScreen.storyboard */; };
+		07099F201F3ECA6F00D66796 /* SayMathAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07099F1F1F3ECA6F00D66796 /* SayMathAppTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07099F1C1F3ECA6F00D66796 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07099EFC1F3ECA6F00D66796 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07099F031F3ECA6F00D66796;
+			remoteInfo = SayMathApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07099F041F3ECA6F00D66796 /* SayMathApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SayMathApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07099F071F3ECA6F00D66796 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		07099F091F3ECA6F00D66796 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		07099F0C1F3ECA6F00D66796 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		07099F0F1F3ECA6F00D66796 /* SayMathApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SayMathApp.xcdatamodel; sourceTree = "<group>"; };
+		07099F111F3ECA6F00D66796 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07099F141F3ECA6F00D66796 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		07099F161F3ECA6F00D66796 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07099F1B1F3ECA6F00D66796 /* SayMathAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SayMathAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07099F1F1F3ECA6F00D66796 /* SayMathAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SayMathAppTests.swift; sourceTree = "<group>"; };
+		07099F211F3ECA6F00D66796 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07099F011F3ECA6F00D66796 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07099F181F3ECA6F00D66796 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07099EFB1F3ECA6F00D66796 = {
+			isa = PBXGroup;
+			children = (
+				07099F061F3ECA6F00D66796 /* SayMathApp */,
+				07099F1E1F3ECA6F00D66796 /* SayMathAppTests */,
+				07099F051F3ECA6F00D66796 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07099F051F3ECA6F00D66796 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07099F041F3ECA6F00D66796 /* SayMathApp.app */,
+				07099F1B1F3ECA6F00D66796 /* SayMathAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07099F061F3ECA6F00D66796 /* SayMathApp */ = {
+			isa = PBXGroup;
+			children = (
+				07099F071F3ECA6F00D66796 /* AppDelegate.swift */,
+				07099F091F3ECA6F00D66796 /* ViewController.swift */,
+				07099F0B1F3ECA6F00D66796 /* Main.storyboard */,
+				07099F111F3ECA6F00D66796 /* Assets.xcassets */,
+				07099F131F3ECA6F00D66796 /* LaunchScreen.storyboard */,
+				07099F161F3ECA6F00D66796 /* Info.plist */,
+				07099F0E1F3ECA6F00D66796 /* SayMathApp.xcdatamodeld */,
+			);
+			path = SayMathApp;
+			sourceTree = "<group>";
+		};
+		07099F1E1F3ECA6F00D66796 /* SayMathAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				07099F1F1F3ECA6F00D66796 /* SayMathAppTests.swift */,
+				07099F211F3ECA6F00D66796 /* Info.plist */,
+			);
+			path = SayMathAppTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07099F031F3ECA6F00D66796 /* SayMathApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07099F241F3ECA6F00D66796 /* Build configuration list for PBXNativeTarget "SayMathApp" */;
+			buildPhases = (
+				07099F001F3ECA6F00D66796 /* Sources */,
+				07099F011F3ECA6F00D66796 /* Frameworks */,
+				07099F021F3ECA6F00D66796 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SayMathApp;
+			productName = SayMathApp;
+			productReference = 07099F041F3ECA6F00D66796 /* SayMathApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		07099F1A1F3ECA6F00D66796 /* SayMathAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07099F271F3ECA6F00D66796 /* Build configuration list for PBXNativeTarget "SayMathAppTests" */;
+			buildPhases = (
+				07099F171F3ECA6F00D66796 /* Sources */,
+				07099F181F3ECA6F00D66796 /* Frameworks */,
+				07099F191F3ECA6F00D66796 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07099F1D1F3ECA6F00D66796 /* PBXTargetDependency */,
+			);
+			name = SayMathAppTests;
+			productName = SayMathAppTests;
+			productReference = 07099F1B1F3ECA6F00D66796 /* SayMathAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07099EFC1F3ECA6F00D66796 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Eric Newman";
+				TargetAttributes = {
+					07099F031F3ECA6F00D66796 = {
+						CreatedOnToolsVersion = 9.0;
+					};
+					07099F1A1F3ECA6F00D66796 = {
+						CreatedOnToolsVersion = 9.0;
+						TestTargetID = 07099F031F3ECA6F00D66796;
+					};
+				};
+			};
+			buildConfigurationList = 07099EFF1F3ECA6F00D66796 /* Build configuration list for PBXProject "SayMathApp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07099EFB1F3ECA6F00D66796;
+			productRefGroup = 07099F051F3ECA6F00D66796 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07099F031F3ECA6F00D66796 /* SayMathApp */,
+				07099F1A1F3ECA6F00D66796 /* SayMathAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07099F021F3ECA6F00D66796 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07099F151F3ECA6F00D66796 /* LaunchScreen.storyboard in Resources */,
+				07099F121F3ECA6F00D66796 /* Assets.xcassets in Resources */,
+				07099F0D1F3ECA6F00D66796 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07099F191F3ECA6F00D66796 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07099F001F3ECA6F00D66796 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07099F0A1F3ECA6F00D66796 /* ViewController.swift in Sources */,
+				07099F081F3ECA6F00D66796 /* AppDelegate.swift in Sources */,
+				07099F101F3ECA6F00D66796 /* SayMathApp.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07099F171F3ECA6F00D66796 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07099F201F3ECA6F00D66796 /* SayMathAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07099F1D1F3ECA6F00D66796 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07099F031F3ECA6F00D66796 /* SayMathApp */;
+			targetProxy = 07099F1C1F3ECA6F00D66796 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		07099F0B1F3ECA6F00D66796 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07099F0C1F3ECA6F00D66796 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		07099F131F3ECA6F00D66796 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07099F141F3ECA6F00D66796 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07099F221F3ECA6F00D66796 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		07099F231F3ECA6F00D66796 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07099F251F3ECA6F00D66796 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2HB7RS77KL;
+				INFOPLIST_FILE = SayMathApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ericonice-gmail.com.SayMathApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		07099F261F3ECA6F00D66796 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2HB7RS77KL;
+				INFOPLIST_FILE = SayMathApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ericonice-gmail.com.SayMathApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		07099F281F3ECA6F00D66796 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2HB7RS77KL;
+				INFOPLIST_FILE = SayMathAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ericonice-gmail.com.SayMathAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SayMathApp.app/SayMathApp";
+			};
+			name = Debug;
+		};
+		07099F291F3ECA6F00D66796 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2HB7RS77KL;
+				INFOPLIST_FILE = SayMathAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ericonice-gmail.com.SayMathAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SayMathApp.app/SayMathApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07099EFF1F3ECA6F00D66796 /* Build configuration list for PBXProject "SayMathApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07099F221F3ECA6F00D66796 /* Debug */,
+				07099F231F3ECA6F00D66796 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07099F241F3ECA6F00D66796 /* Build configuration list for PBXNativeTarget "SayMathApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07099F251F3ECA6F00D66796 /* Debug */,
+				07099F261F3ECA6F00D66796 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07099F271F3ECA6F00D66796 /* Build configuration list for PBXNativeTarget "SayMathAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07099F281F3ECA6F00D66796 /* Debug */,
+				07099F291F3ECA6F00D66796 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		07099F0E1F3ECA6F00D66796 /* SayMathApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				07099F0F1F3ECA6F00D66796 /* SayMathApp.xcdatamodel */,
+			);
+			currentVersion = 07099F0F1F3ECA6F00D66796 /* SayMathApp.xcdatamodel */;
+			path = SayMathApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 07099EFC1F3ECA6F00D66796 /* Project object */;
+}
