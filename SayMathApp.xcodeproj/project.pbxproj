@@ -14,6 +14,7 @@
 		07099F151F3ECA6F00D66796 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07099F131F3ECA6F00D66796 /* LaunchScreen.storyboard */; };
 		07099F201F3ECA6F00D66796 /* SayMathAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07099F1F1F3ECA6F00D66796 /* SayMathAppTests.swift */; };
 		07099F2C1F3ECCDF00D66796 /* MathTestInitiatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07099F2B1F3ECCDF00D66796 /* MathTestInitiatorViewController.swift */; };
+		07C311E31F3FB8B70086A0A4 /* MathTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C311E21F3FB8B70086A0A4 /* MathTestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		07099F1F1F3ECA6F00D66796 /* SayMathAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SayMathAppTests.swift; sourceTree = "<group>"; };
 		07099F211F3ECA6F00D66796 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07099F2B1F3ECCDF00D66796 /* MathTestInitiatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathTestInitiatorViewController.swift; sourceTree = "<group>"; };
+		07C311E21F3FB8B70086A0A4 /* MathTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathTestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				07099F0B1F3ECA6F00D66796 /* Main.storyboard */,
 				07099F2B1F3ECCDF00D66796 /* MathTestInitiatorViewController.swift */,
+				07C311E21F3FB8B70086A0A4 /* MathTestViewController.swift */,
 				07099F071F3ECA6F00D66796 /* AppDelegate.swift */,
 				07099F161F3ECA6F00D66796 /* Info.plist */,
 				07099F2A1F3ECA8900D66796 /* Supporting Files */,
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07C311E31F3FB8B70086A0A4 /* MathTestViewController.swift in Sources */,
 				07099F081F3ECA6F00D66796 /* AppDelegate.swift in Sources */,
 				07099F101F3ECA6F00D66796 /* SayMathApp.xcdatamodeld in Sources */,
 				07099F2C1F3ECCDF00D66796 /* MathTestInitiatorViewController.swift in Sources */,

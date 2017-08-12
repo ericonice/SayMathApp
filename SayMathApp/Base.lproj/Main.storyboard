@@ -16,7 +16,43 @@
                     <view key="view" contentMode="scaleToFill" id="im9-q8-9lU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="WdN-te-w1G">
+                                <rect key="frame" x="23" y="171" width="275" height="227"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SgQ-E2-K1B">
+                                        <rect key="frame" x="2" y="0.0" width="271" height="29"/>
+                                        <segments>
+                                            <segment title="Add"/>
+                                            <segment title="Subtract"/>
+                                            <segment title="Multiply"/>
+                                            <segment title="Divide"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eAp-FD-2nT">
+                                        <rect key="frame" x="0.0" y="88" width="275" height="29"/>
+                                        <segments>
+                                            <segment title="Basic"/>
+                                            <segment title="Intermediate"/>
+                                            <segment title="Expert"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMh-pI-qP2">
+                                        <rect key="frame" x="80.5" y="176" width="114" height="51"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <state key="normal" title="Let's Go"/>
+                                        <connections>
+                                            <segue destination="K2X-GA-E7X" kind="show" identifier="StartTest" id="hMo-Ii-l69"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WdN-te-w1G" firstAttribute="centerY" secondItem="im9-q8-9lU" secondAttribute="centerY" id="2d4-sV-gqg"/>
+                            <constraint firstItem="WdN-te-w1G" firstAttribute="centerX" secondItem="im9-q8-9lU" secondAttribute="centerX" id="5jm-80-bkx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nLo-de-OkX"/>
                     </view>
                     <navigationItem key="navigationItem" title="Test Your Math Skills" id="oEH-0d-Gok"/>
@@ -24,6 +60,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pgl-AF-zNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="753.75" y="-69.718309859154928"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dpE-mV-S7T">
+            <objects>
+                <viewController id="K2X-GA-E7X" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sfL-9k-ypc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="XCY-sV-H9q"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Way-48-iKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1607" y="-71"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="I7n-YG-NeQ">

@@ -1,36 +1,21 @@
 //
-//  MathTestInitiatorViewController.swift
+//  MathTestViewController.swift
 //  SayMathApp
 //
-//  Created by Eric Newman on 8/11/17.
+//  Created by Eric Newman on 8/12/17.
 //  Copyright © 2017 Eric Newman. All rights reserved.
 //
 
 import UIKit
 
-class MathTestInitiatorViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
-{
-    @IBOutlet weak var difficultyPickerView: UIPickerView!
+class MathTestViewController: UIViewController {
 
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 10
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return String(row + 1)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
     }
 
-    
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
