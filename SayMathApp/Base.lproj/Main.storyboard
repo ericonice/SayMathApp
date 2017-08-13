@@ -18,27 +18,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="WdN-te-w1G">
-                                <rect key="frame" x="22.5" y="170.5" width="275" height="227"/>
+                                <rect key="frame" x="8.5" y="170.5" width="303" height="227"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SgQ-E2-K1B">
-                                        <rect key="frame" x="2" y="0.0" width="271" height="29"/>
+                                        <rect key="frame" x="20" y="0.0" width="263" height="29"/>
                                         <segments>
-                                            <segment title="Add"/>
-                                            <segment title="Subtract"/>
-                                            <segment title="Multiply"/>
-                                            <segment title="Divide"/>
+                                            <segment title="add"/>
+                                            <segment title="subtract"/>
+                                            <segment title="multiply"/>
+                                            <segment title="divide"/>
                                         </segments>
                                     </segmentedControl>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eAp-FD-2nT">
-                                        <rect key="frame" x="0.0" y="88" width="275" height="29"/>
+                                        <rect key="frame" x="0.0" y="88" width="303" height="29"/>
                                         <segments>
-                                            <segment title="Basic"/>
-                                            <segment title="Intermediate"/>
-                                            <segment title="Expert"/>
+                                            <segment title="easy"/>
+                                            <segment title="medium"/>
+                                            <segment title="hard"/>
+                                            <segment title="legendary"/>
                                         </segments>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMh-pI-qP2">
-                                        <rect key="frame" x="80.5" y="176" width="114" height="51"/>
+                                        <rect key="frame" x="94.5" y="176" width="114" height="51"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                         <state key="normal" title="Let's Go"/>
                                         <connections>
@@ -56,6 +57,10 @@
                         <viewLayoutGuide key="safeArea" id="nLo-de-OkX"/>
                     </view>
                     <navigationItem key="navigationItem" title="Test Your Math Skills" id="oEH-0d-Gok"/>
+                    <connections>
+                        <outlet property="difficultyControl" destination="eAp-FD-2nT" id="YLv-Nu-RyX"/>
+                        <outlet property="operationControl" destination="SgQ-E2-K1B" id="3Gn-bh-PSW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pgl-AF-zNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -134,8 +139,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="operator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRk-MY-2IA">
-                                        <rect key="frame" x="60" y="81" width="29" height="36"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="symbol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRk-MY-2IA">
+                                        <rect key="frame" x="60" y="81" width="66" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -156,6 +161,14 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6T-cH-Sgo">
+                                <rect key="frame" x="125" y="402" width="69" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="✅"/>
+                                <connections>
+                                    <action selector="nextQuestion:" destination="K2X-GA-E7X" eventType="touchUpInside" id="ade-JK-6oS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -168,6 +181,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XCY-sV-H9q"/>
                     </view>
+                    <connections>
+                        <outlet property="answer" destination="cf4-9o-XSI" id="R8i-V6-gF7"/>
+                        <outlet property="audio" destination="gEd-iE-wTB" id="qvb-NP-SOO"/>
+                        <outlet property="correct" destination="fpv-uH-ipU" id="qFe-Ah-TQu"/>
+                        <outlet property="firstOperand" destination="3F2-vh-0ub" id="hAY-GE-Fvu"/>
+                        <outlet property="incorrect" destination="lwK-51-bto" id="b5h-Ku-rk5"/>
+                        <outlet property="secondOperand" destination="cf4-9o-XSI" id="fcT-jr-afF"/>
+                        <outlet property="status" destination="Yy3-Ed-dur" id="gma-EU-skP"/>
+                        <outlet property="symbol" destination="lRk-MY-2IA" id="HX6-G6-Hqx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Way-48-iKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

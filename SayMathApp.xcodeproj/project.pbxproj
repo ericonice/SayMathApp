@@ -23,6 +23,7 @@
 		07C311F31F3FC7720086A0A4 /* SayMathConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C311F21F3FC7720086A0A4 /* SayMathConstants.swift */; };
 		07C311F51F3FC7B30086A0A4 /* SayMathError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C311F41F3FC7B30086A0A4 /* SayMathError.swift */; };
 		07C311F81F3FC8170086A0A4 /* SpeechDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C311F71F3FC8170086A0A4 /* SpeechDetector.swift */; };
+		07C311FC1F3FD05E0086A0A4 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C311FB1F3FD05E0086A0A4 /* Difficulty.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		07C311F21F3FC7720086A0A4 /* SayMathConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SayMathConstants.swift; sourceTree = "<group>"; };
 		07C311F41F3FC7B30086A0A4 /* SayMathError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SayMathError.swift; sourceTree = "<group>"; };
 		07C311F71F3FC8170086A0A4 /* SpeechDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechDetector.swift; sourceTree = "<group>"; };
+		07C311FB1F3FD05E0086A0A4 /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				07C311E71F3FC3360086A0A4 /* Operation.swift */,
 				07C311E91F3FC3700086A0A4 /* EquationGenerator.swift */,
 				07C311F01F3FC72A0086A0A4 /* EquationTester.swift */,
+				07C311FB1F3FD05E0086A0A4 /* Difficulty.swift */,
 			);
 			path = Equations;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				07C311F11F3FC72A0086A0A4 /* EquationTester.swift in Sources */,
 				07099F2C1F3ECCDF00D66796 /* MathTestInitiatorViewController.swift in Sources */,
 				07C311F31F3FC7720086A0A4 /* SayMathConstants.swift in Sources */,
+				07C311FC1F3FD05E0086A0A4 /* Difficulty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

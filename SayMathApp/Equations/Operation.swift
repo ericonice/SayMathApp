@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Operation
+enum Operation : String
 {
     case add
     case subtract

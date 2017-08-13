@@ -10,10 +10,13 @@ import Foundation
 
 class EquationTester {
     
-    init(operation: Operation, numberOfQuestions: Int) {
+    init(operation: Operation, difficulty: Difficulty, numberOfQuestions: Int) {
         self.numberOfQuestions = numberOfQuestions
-        self.equationGenerator = EquationGenerator(operation: operation)
+        self.difficulty = difficulty
+        self.equationGenerator = EquationGenerator(operation: operation, difficulty: difficulty)
     }
+    
+    var difficulty : Difficulty
     
     var currentEquation : Equation?
     

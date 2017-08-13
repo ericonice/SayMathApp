@@ -8,27 +8,17 @@
 
 import UIKit
 
-class MathTestInitiatorViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
+class MathTestInitiatorViewController: UIViewController
 {
-    @IBOutlet weak var difficultyPickerView: UIPickerView!
-
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
+    @IBOutlet weak var operationControl: UISegmentedControl!
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 10
-    }
+    @IBOutlet weak var difficultyControl: UISegmentedControl!
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return String(row + 1)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    
     
     
     override func didReceiveMemoryWarning() {
@@ -37,14 +27,21 @@ class MathTestInitiatorViewController: UIViewController, UIPickerViewDataSource,
     }
     
 
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        var operation = Operation(rawValue: operationControl!.titleForSegment(at: operationControl.selectedSegmentIndex)!)
+        var difficulty = Difficulty(rawValue: difficultyControl!.titleForSegment(at: difficultyControl.selectedSegmentIndex)!)
+        
+        var destinationViewController = segue.destination
+        
+        if let navigationController = destinationViewController as? UINavigationController {
+            destinationViewController = navigationController.visibleViewController ?? destinationViewController
+        }
+        
+        if let mathViewTestController = destinationViewController as? MathTestViewController {
+            mathViewTestController.equationTester = EquationTester(operation: operation!, difficulty: difficulty!, numberOfQuestions: 10)
+        }
     }
-    */
+    
 
 }
