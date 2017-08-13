@@ -30,7 +30,10 @@ class SpeechDetector: NSObject, SFSpeechRecognizerDelegate {
         recording = false
     }
     
-    func recognizeSpeech(with resultHandler: @escaping (String) -> (), errorWith errorHandler: @escaping (String) -> ()) throws  {
+    func recognizeSpeech(
+        with resultHandler: @escaping (String) -> (),
+        errorWith errorHandler: @escaping (String) -> ()) throws
+    {
         if (!authorized) {
             try self.requestSpeechAuthorization()
         }
@@ -56,7 +59,6 @@ class SpeechDetector: NSObject, SFSpeechRecognizerDelegate {
         // A recognition task represents a speech recognition session.
         // We keep a reference to the task so that it can be cancelled.
         var count = 0
-        var lastResponse : String = ""
         recognitionTask = speechRecognizer?.recognitionTask(with: recognitionRequest!) { result, error in
             print("1:recognize")
             
@@ -77,9 +79,7 @@ class SpeechDetector: NSObject, SFSpeechRecognizerDelegate {
             print("20:recognize")
             if let result = result {
                 print("21:recognize:" + result.bestTranscription.formattedString)
-                lastResponse = self.getLastWord(text: result.bestTranscription.formattedString) ?? ""
-                print("30:recognize")
-                resultHandler(lastResponse)
+                resultHandler(result.bestTranscription.formattedString)
             }
             
             print("33:recognize")
@@ -122,11 +122,6 @@ class SpeechDetector: NSObject, SFSpeechRecognizerDelegate {
         }
     }
     
-    func getLastWord(text: String) -> String?
-    {
-        let split = text.components(separatedBy: " ")
-        return split.last
-    }
     
 }
 

@@ -24,6 +24,7 @@
 		07C311F51F3FC7B30086A0A4 /* SayMathError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C311F41F3FC7B30086A0A4 /* SayMathError.swift */; };
 		07C311F81F3FC8170086A0A4 /* SpeechDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C311F71F3FC8170086A0A4 /* SpeechDetector.swift */; };
 		07C311FC1F3FD05E0086A0A4 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C311FB1F3FD05E0086A0A4 /* Difficulty.swift */; };
+		07C311FE1F3FDB740086A0A4 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C311FD1F3FDB740086A0A4 /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		07C311F41F3FC7B30086A0A4 /* SayMathError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SayMathError.swift; sourceTree = "<group>"; };
 		07C311F71F3FC8170086A0A4 /* SpeechDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechDetector.swift; sourceTree = "<group>"; };
 		07C311FB1F3FD05E0086A0A4 /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
+		07C311FD1F3FDB740086A0A4 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				07C311EC1F3FC61F0086A0A4 /* Utilities.swift */,
+				07C311FD1F3FDB740086A0A4 /* StringExtensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				07099F101F3ECA6F00D66796 /* SayMathApp.xcdatamodeld in Sources */,
 				07C311ED1F3FC61F0086A0A4 /* Utilities.swift in Sources */,
 				07C311F11F3FC72A0086A0A4 /* EquationTester.swift in Sources */,
+				07C311FE1F3FDB740086A0A4 /* StringExtensions.swift in Sources */,
 				07099F2C1F3ECCDF00D66796 /* MathTestInitiatorViewController.swift in Sources */,
 				07C311F31F3FC7720086A0A4 /* SayMathConstants.swift in Sources */,
 				07C311FC1F3FD05E0086A0A4 /* Difficulty.swift in Sources */,

@@ -25,16 +25,54 @@ class MathTestViewController: UIViewController {
     
     @IBOutlet weak var answer: UILabel!
     
-    var equationTester : EquationTester?
+    var mathTest : EquationTester!
     
+    var speechDetector = SpeechDetector()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Get the initial question
+        self.getNextEquation()
+        self.status.text = nil
+        self.audio.text = nil
+    }
+
+    func getNextEquation() {
+        if (mathTest.done) {
+            // TODO: Do something here
+            return
+        }
+        
+        self.equation = mathTest.getNextEquation()
+        
+        do {
+            try speechDetector.recognizeSpeech(with: updateAnswer, errorWith: handleError)
+            
+        } catch {
+            self.status.text = error.localizedDescription
+        }
+    }
+    
+    func updateAnswer(_ result: String) {
+        self.audio.text = result
+        
+        // Answer is the last word of the current audio
+        self.answer.text = result.getLastWord()
+    }
+    
+    func handleError(_ result: String) {
+        self.status.text = result
+    }
+
     var equation : Equation? {
         didSet {
             self.firstOperand.text = String(equation!.firstOperand)
             self.secondOperand.text = String(equation!.secondOperand)
             self.symbol.text = equation!.operation.getSymbol()
             self.answer.text = ""
-            self.correct.text = String(equationTester!.correct)
-            self.incorrect.text = String(equationTester!.incorrect)
+            self.correct.text = String(mathTest.correct)
+            self.incorrect.text = String(mathTest.incorrect)
         }
     }
     
@@ -44,11 +82,6 @@ class MathTestViewController: UIViewController {
     }
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

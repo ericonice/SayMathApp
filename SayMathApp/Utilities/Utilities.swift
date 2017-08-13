@@ -16,17 +16,5 @@ class Utilities {
         formatter.numberStyle = .spellOut
         return formatter
     }()
-    
-    static func toInt(from text: String) -> Int? {
-        if let value = Int(text) {
-            return value
-        }
-        
-        if let value = numberFormatter.number(from: text) {
-            return value.intValue
-        }
-        
-        return nil
-    }
 }
 

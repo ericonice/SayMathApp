@@ -29,8 +29,8 @@ class MathTestInitiatorViewController: UIViewController
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var operation = Operation(rawValue: operationControl!.titleForSegment(at: operationControl.selectedSegmentIndex)!)
-        var difficulty = Difficulty(rawValue: difficultyControl!.titleForSegment(at: difficultyControl.selectedSegmentIndex)!)
+        let operation = Operation(rawValue: operationControl!.titleForSegment(at: operationControl.selectedSegmentIndex)!)
+        let difficulty = Difficulty(rawValue: difficultyControl!.titleForSegment(at: difficultyControl.selectedSegmentIndex)!)
         
         var destinationViewController = segue.destination
         
@@ -39,7 +39,7 @@ class MathTestInitiatorViewController: UIViewController
         }
         
         if let mathViewTestController = destinationViewController as? MathTestViewController {
-            mathViewTestController.equationTester = EquationTester(operation: operation!, difficulty: difficulty!, numberOfQuestions: 10)
+            mathViewTestController.mathTest = EquationTester(operation: operation!, difficulty: difficulty!, numberOfQuestions: 10)
         }
     }
     
