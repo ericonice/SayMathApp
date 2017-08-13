@@ -24,6 +24,17 @@ class SayMathAppTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssertEqual(1234, "1234".toInt())
+        XCTAssertEqual(1, "One".toInt())
+        XCTAssertEqual(2, "one".toInt())
+        XCTAssertEqual(3, "Three".toInt())
+        XCTAssertEqual(4, "four".toInt())
+        XCTAssertEqual(5, "FIVE".toInt())
+        XCTAssertEqual(6, "six".toInt())
+        XCTAssertEqual(7, "SEVEN".toInt())
+        XCTAssertEqual(8, "Eight".toInt())
+        XCTAssertEqual(9, "nine".toInt())
+        XCTAssertNil("iamnotanumber".toInt())
     }
     
     func testPerformanceExample() {

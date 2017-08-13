@@ -16,13 +16,13 @@ extension String {
         return split.last
     }
     
-    func toInt(from text: String) -> Int? {
-        // TODO: Add unit tests
-        if let value = Int(text) {
+    func toInt() -> Int? {
+        if let value = Int(self) {
             return value
         }
         
-        if let value = Utilities.numberFormatter.number(from: text) {
+        let normalized = self.lowercased()
+        if let value = Utilities.numberFormatter.number(from: normalized) {
             return value.intValue
         }
         

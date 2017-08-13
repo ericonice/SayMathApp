@@ -36,6 +36,9 @@ class MathTestViewController: UIViewController {
         self.getNextEquation()
         self.status.text = nil
         self.audio.text = nil
+        
+        answer.layer.borderWidth = 2.0
+        answer.layer.borderColor = UIColor.blue.cgColor
     }
 
     func getNextEquation() {
@@ -76,12 +79,22 @@ class MathTestViewController: UIViewController {
         }
     }
     
-    
-    
     @IBAction func nextQuestion(_ sender: Any) {
+        checkAnswer(for: self.answer.text ?? "")
     }
     
-    
+    func checkAnswer(for value: String) {
+        speechDetector.stopRecording()
+        let answerAsInt = value.toInt()
+        
+        // Convert to digits (i.e. one to 1)
+        if (answerAsInt != nil) {
+            self.answer.text = String(answerAsInt!)
+        }
+        
+        mathTest.processResult(for: answerAsInt)
+        self.getNextEquation()
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

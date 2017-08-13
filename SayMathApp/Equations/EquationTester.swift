@@ -30,7 +30,7 @@ class EquationTester {
     
     var done : Bool {
         get {
-            return answered == numberOfQuestions
+            return answered >= numberOfQuestions
         }
     }
     
