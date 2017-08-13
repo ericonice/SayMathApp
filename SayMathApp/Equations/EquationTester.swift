@@ -43,7 +43,7 @@ class EquationTester {
     var currentScore : Int? {
         get {
             if answered != 0 {
-                return correct / incorrect
+                return (100 * correct) / answered
             }
             
             return nil

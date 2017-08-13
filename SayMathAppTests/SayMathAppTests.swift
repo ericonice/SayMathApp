@@ -26,7 +26,7 @@ class SayMathAppTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         XCTAssertEqual(1234, "1234".toInt())
         XCTAssertEqual(1, "One".toInt())
-        XCTAssertEqual(2, "one".toInt())
+        XCTAssertEqual(2, "two".toInt())
         XCTAssertEqual(3, "Three".toInt())
         XCTAssertEqual(4, "four".toInt())
         XCTAssertEqual(5, "FIVE".toInt())

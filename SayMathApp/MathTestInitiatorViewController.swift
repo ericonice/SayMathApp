@@ -19,6 +19,7 @@ class MathTestInitiatorViewController: UIViewController
         super.viewDidLoad()
     }
 
+    @IBOutlet weak var numberOfQuestionsControl: UISegmentedControl!
     
     
     override func didReceiveMemoryWarning() {
@@ -32,6 +33,7 @@ class MathTestInitiatorViewController: UIViewController
         let operation = Operation(rawValue: operationControl!.titleForSegment(at: operationControl.selectedSegmentIndex)!)
         let difficulty = Difficulty(rawValue: difficultyControl!.titleForSegment(at: difficultyControl.selectedSegmentIndex)!)
         
+        let numberOfQuestions = Int(numberOfQuestionsControl.titleForSegment(at: numberOfQuestionsControl.selectedSegmentIndex)!)!
         var destinationViewController = segue.destination
         
         if let navigationController = destinationViewController as? UINavigationController {
@@ -39,7 +41,7 @@ class MathTestInitiatorViewController: UIViewController
         }
         
         if let mathViewTestController = destinationViewController as? MathTestViewController {
-            mathViewTestController.mathTest = EquationTester(operation: operation!, difficulty: difficulty!, numberOfQuestions: 10)
+            mathViewTestController.mathTest = EquationTester(operation: operation!, difficulty: difficulty!, numberOfQuestions: numberOfQuestions)
         }
     }
     

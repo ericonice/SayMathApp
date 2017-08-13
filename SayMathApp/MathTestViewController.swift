@@ -15,6 +15,8 @@ class MathTestViewController: UIViewController {
     
     @IBOutlet weak var audio: UILabel!
     
+    @IBOutlet weak var timeLabel: UILabel!
+    
     @IBOutlet weak var status: UILabel!
     
     @IBOutlet weak var symbol: UILabel!
@@ -29,6 +31,10 @@ class MathTestViewController: UIViewController {
     
     var speechDetector = SpeechDetector()
     
+    var timeInSeconds = 0
+    
+    var timeTicker: Timer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,14 +42,35 @@ class MathTestViewController: UIViewController {
         self.getNextEquation()
         self.status.text = nil
         self.audio.text = nil
+        self.correct.text = String(mathTest.correct)
+        self.incorrect.text = String(mathTest.incorrect)
+        timeLabel.text = String(formatTime())
         
         answer.layer.borderWidth = 2.0
         answer.layer.borderColor = UIColor.blue.cgColor
+        
+        timeTicker = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: updateTime)
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        timeTicker?.invalidate()
+    }
+    
+    func updateTime(timer : Timer) {
+        timeInSeconds = timeInSeconds + 1
+        timeLabel.text = String(formatTime())
+    }
+    
+    func formatTime() -> String {
+        let minutes = timeInSeconds / 60
+        let seconds = timeInSeconds % 60
+        return String(format: "%02d:%02d", minutes, seconds)
+    }
+    
     func getNextEquation() {
         if (mathTest.done) {
-            // TODO: Do something here
+            showResults()
             return
         }
         
@@ -74,8 +101,6 @@ class MathTestViewController: UIViewController {
             self.secondOperand.text = String(equation!.secondOperand)
             self.symbol.text = equation!.operation.getSymbol()
             self.answer.text = ""
-            self.correct.text = String(mathTest.correct)
-            self.incorrect.text = String(mathTest.incorrect)
         }
     }
     
@@ -93,6 +118,8 @@ class MathTestViewController: UIViewController {
         }
         
         mathTest.processResult(for: answerAsInt)
+        self.correct.text = String(mathTest.correct)
+        self.incorrect.text = String(mathTest.incorrect)
         self.getNextEquation()
     }
     
@@ -101,7 +128,17 @@ class MathTestViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    func showResults() {
+        let results = "Time: \(timeInSeconds) seconds\nCorrect: \(mathTest.correct)\nIncorrect: \(mathTest.incorrect)\nScore: \(mathTest.currentScore ?? 0)%"
+        let alertController = UIAlertController(title: "Results", message: results, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in
+                self.navigationController?.popViewController(animated: true)
+        })
+
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
     /*
      // MARK: - Navigation
      
