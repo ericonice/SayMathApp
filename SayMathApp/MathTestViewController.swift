@@ -89,6 +89,13 @@ class MathTestViewController: UIViewController {
         
         // Answer is the last word of the current audio
         self.answer.text = result.getLastWord()
+        
+        // If correct, then automatically get next question
+        if let answerAsInt = self.answer?.text?.toInt() {
+            if answerAsInt == mathTest.currentEquation?.result {
+                checkAnswer(for: (self.answer.text)!)
+            }
+        }
     }
     
     func handleError(_ result: String) {

@@ -18,38 +18,59 @@ class EquationGenerator
         case .add, .subtract:
         switch difficulty {
         case .easy:
-            minOperandValue = 0
-            maxOperandValue = 5
+            firstOperand = { _ in return EquationGenerator.getRandomInt(min: 0, max: 5) }
+            secondOperand = { return EquationGenerator.getRandomInt(min: 0, max: 5) }
+            
         case .medium:
-            minOperandValue = 0
-            maxOperandValue = 10
+            firstOperand = { _ in return EquationGenerator.getRandomInt(min: 0, max: 10) }
+            secondOperand = { return EquationGenerator.getRandomInt(min: 0, max: 10) }
+            
         case .hard:
-            minOperandValue = -30
-            maxOperandValue = 30
-        case .legendaray:
-            minOperandValue = -100
-            maxOperandValue = 100
-            }
+            firstOperand = { _ in return EquationGenerator.getRandomInt(min: -30, max: 30) }
+            secondOperand = { return EquationGenerator.getRandomInt(min: -30, max: 30) }
+            
+        case .legendary:
+            firstOperand = { _ in return EquationGenerator.getRandomInt(min: -100, max: 100) }
+            secondOperand = { return EquationGenerator.getRandomInt(min: -100, max: 100) }
+        }
             
         case .multiply:
                 switch difficulty {
                 case .easy:
-                    minOperandValue = 0
-                    maxOperandValue = 3
+                    firstOperand = { _ in return EquationGenerator.getRandomInt(min: 0, max: 3) }
+                    secondOperand = { return EquationGenerator.getRandomInt(min: 0, max: 3) }
+
                 case .medium:
-                    minOperandValue = 0
-                    maxOperandValue = 6
+                    firstOperand = { _ in return EquationGenerator.getRandomInt(min: 0, max: 6) }
+                    secondOperand = { return EquationGenerator.getRandomInt(min: 0, max: 6) }
+                    
                 case .hard:
-                    minOperandValue = 0
-                    maxOperandValue = 12
-                case .legendaray:
-                    minOperandValue = -15
-                    maxOperandValue = 15
+                    firstOperand = { _ in return EquationGenerator.getRandomInt(min: 6, max: 12) }
+                    secondOperand = { return EquationGenerator.getRandomInt(min: 2, max: 12) }
+                    
+                case .legendary:
+                    firstOperand = { _ in return EquationGenerator.getRandomInt(min: -15, max: 15) }
+                    secondOperand = { return EquationGenerator.getRandomInt(min: -15, max: 15) }
             }
             
         case .divide:
-            minOperandValue = 0
-            maxOperandValue = 12
+            switch difficulty {
+            case .easy:
+                secondOperand = { return EquationGenerator.getRandomInt(min: 1, max: 3) }
+                firstOperand = { x in return x * EquationGenerator.getRandomInt(min: 0, max: 3) }
+
+            case .medium:
+                secondOperand = { return EquationGenerator.getRandomInt(min: 1, max: 6) }
+                firstOperand = { x in return x * EquationGenerator.getRandomInt(min: 0, max: 6) }
+
+            case .hard:
+                secondOperand = { return EquationGenerator.getRandomInt(min: 1, max: 12) }
+                firstOperand = { x in return x * EquationGenerator.getRandomInt(min: 6, max: 12) }
+
+            case .legendary:
+                secondOperand = { return EquationGenerator.getRandomInt(min: 1, max: 25) }
+                firstOperand = { x in return x * EquationGenerator.getRandomInt(min: -25, max: 25) }
+            }
         }
     }
     
@@ -57,15 +78,19 @@ class EquationGenerator
     
     var difficulty : Difficulty
     
-    var minOperandValue = Int(0)
+    var firstOperand : (Int) -> Int
     
-    var maxOperandValue = Int(12)
+    var secondOperand : () -> Int
     
     func createEquation() -> Equation {
-        let distance = UInt32(maxOperandValue - minOperandValue)
-        let firstOperand = Int(arc4random_uniform(distance)) - minOperandValue
-        let secondOperand = Int(arc4random_uniform(distance)) - minOperandValue
-        return Equation(firstOperand: firstOperand, secondOperand: secondOperand, operation: operation)
+        let y = secondOperand()
+        let x = firstOperand(y)
+        return Equation(firstOperand: x, secondOperand: y, operation: operation)
+    }
+    
+    static func getRandomInt(min : Int, max: Int) -> Int {
+        let distance = UInt32(max - min)
+        return Int(arc4random_uniform(distance)) + min
     }
     
 }
