@@ -77,7 +77,7 @@ class MathTestViewController: UIViewController {
         self.equation = mathTest.getNextEquation()
         
         do {
-            try speechDetector.recognizeSpeech(with: updateAnswer, errorWith: handleError)
+            try speechDetector.recognizeSpeech(with: updateAnswer, finishWith: doSomething,errorWith: handleError)
             
         } catch {
             self.status.text = error.localizedDescription
@@ -93,9 +93,17 @@ class MathTestViewController: UIViewController {
         // If correct, then automatically get next question
         if let answerAsInt = self.answer?.text?.toInt() {
             if answerAsInt == mathTest.currentEquation?.result {
-                checkAnswer(for: (self.answer.text)!)
+                self.answer.text = String(answerAsInt)
+                speechDetector.stopRecording()
             }
         }
+    }
+
+    func doSomething(_ result: String) {
+        self.audio.text = result
+        self.answer.text = result.getLastWord()
+        
+        checkAnswer(for: self.answer.text!)
     }
     
     func handleError(_ result: String) {
@@ -112,11 +120,11 @@ class MathTestViewController: UIViewController {
     }
     
     @IBAction func nextQuestion(_ sender: Any) {
-        checkAnswer(for: self.answer.text ?? "")
+        speechDetector.stopRecording()
     }
     
     func checkAnswer(for value: String) {
-        speechDetector.stopRecording()
+        
         let answerAsInt = value.toInt()
         
         // Convert to digits (i.e. one to 1)
